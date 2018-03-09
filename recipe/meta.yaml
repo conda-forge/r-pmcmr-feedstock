@@ -1,4 +1,4 @@
-{% set version = '4.1' %}
+{% set version = "4.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/PMCMR_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/PMCMR/PMCMR_{{ version }}.tar.gz
-  sha256: 6c164e2976c59ddd27297433a34fa61b1e70b9e26265abdf9c8af1b639d2d555
+  sha256: 0c754468924cee8764574559ce8e3b82f40335a61551d7c98cb3930190b10eb7
 
 build:
   number: 0
