@@ -1,5 +1,4 @@
-{% set version = "4.3" %}
-
+{% set version = '4.3' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,44 +9,43 @@ package:
 source:
   fn: PMCMR_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/PMCMR_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/PMCMR/PMCMR_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/PMCMR_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/PMCMR/PMCMR_{{ version }}.tar.gz
   sha256: 328a2880dd614dc412e8dca21d29ed9d5eea29ccbe0eff98c8068100856c7b25
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
-
   run:
     - r-base
 
 test:
   commands:
-    - $R -e "library('PMCMR')"  # [not win]
+    - $R -e "library('PMCMR')"           # [not win]
     - "\"%R%\" -e \"library('PMCMR')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=PMCMR
   license: GPL (>= 3)
-  summary: The Kruskal and Wallis one-way analysis of variance by ranks  or van der Waerden's
-    normal score test can be employed,  if the data do not meet the assumptions  for
-    one-way ANOVA. Provided that significant differences  were detected by the omnibus
-    test, one may be interested  in applying post-hoc tests for pairwise multiple comparisons  (such
-    as Nemenyi's test, Dunn's test, Conover's test, van der Waerden's test). Similarly,
-    one-way ANOVA with repeated  measures that is also referred to as ANOVA with unreplicated  block
-    design can also be conducted via the Friedman-Test  or the Quade-test. The consequent
-    post-hoc pairwise  multiple comparison tests according to Nemenyi, Conover and Quade
-    are also provided in this package. Finally Durbin's test for  a two-way balanced
-    incomplete block design (BIBD) is also given in this package.
+  summary: 'Note, that the ''PMCMR'' package is superseded by the novel ''PMCMRplus'' package.
+    The ''PMCMRplus'' package contains all functions from  ''PMCMR'' and many more parametric
+    and non-parametric multiple comparison procedures, one-factorial trend tests, as
+    well as improved method functions,  such as print, summary and plot.  The ''PMCMR''
+    package is no longer maintained, but kept for compatibility of reverse depending
+    packages for some time. '
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
@@ -55,3 +53,5 @@ extra:
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
+    - dbast
