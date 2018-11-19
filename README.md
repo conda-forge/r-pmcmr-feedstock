@@ -14,9 +14,8 @@ Summary: Note, that the 'PMCMR' package is superseded by the novel 'PMCMRplus' p
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-pmcmr-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-pmcmr-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-pmcmr-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-pmcmr-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-pmcmr-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-pmcmr-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-pmcmr-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-pmcmr-feedstock)
 
 Current release info
 ====================
