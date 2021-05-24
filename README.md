@@ -5,11 +5,9 @@ Home: https://CRAN.R-project.org/package=PMCMR
 
 Package license: GPL (>= 3)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pmcmr-feedstock/blob/master/LICENSE.txt)
 
 Summary: Note, that the 'PMCMR' package is superseded by the novel 'PMCMRplus' package. The 'PMCMRplus' package contains all functions from  'PMCMR' and many more parametric and non-parametric multiple comparison procedures, one-factorial trend tests, as well as improved method functions,  such as print, summary and plot.  The 'PMCMR' package is no longer maintained, but kept for compatibility of reverse depending packages for some time. 
-
-
 
 Current build status
 ====================
@@ -38,6 +36,7 @@ Installing `r-pmcmr` from the `conda-forge` channel can be achieved by adding `c
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-pmcmr` can be installed with:
@@ -108,9 +107,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
