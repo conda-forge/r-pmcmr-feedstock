@@ -1,11 +1,11 @@
-About r-pmcmr
-=============
+About r-pmcmr-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pmcmr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=PMCMR
 
 Package license: GPL (>= 3)
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pmcmr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Note, that the 'PMCMR' package is superseded by the novel 'PMCMRplus' package. The 'PMCMRplus' package contains all functions from  'PMCMR' and many more parametric and non-parametric multiple comparison procedures, one-factorial trend tests, as well as improved method functions,  such as print, summary and plot.  The 'PMCMR' package is no longer maintained, but kept for compatibility of reverse depending packages for some time. 
 
